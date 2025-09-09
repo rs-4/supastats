@@ -1,102 +1,192 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Database, BarChart3, Users, Folder, Shield, FileText, Apple, Smartphone } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="flex items-center space-x-2">
+            <Database className="h-8 w-8 text-primary" />
+            <span className="text-2xl font-bold text-foreground">SupaStats</span>
+          </div>
+          <div className="flex items-center space-x-6">
+            <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+              Privacy
+            </Link>
+            <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+              Terms
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Monitor Your{" "}
+              <span className="text-primary">Supabase</span>{" "}
+              Database
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              A powerful mobile app to track your Supabase database performance, 
+              monitor SQL queries, manage users, and explore storage buckets - all in real-time.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                <Apple className="h-5 w-5" />
+                Download for iOS
+              </button>
+              <button className="border border-border text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-muted transition-colors flex items-center justify-center gap-2">
+                <Smartphone className="h-5 w-5" />
+                Coming Soon on Android
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Everything You Need to Monitor Supabase
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Comprehensive database monitoring and management tools
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* SQL Query Monitoring */}
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-lg transition-shadow">
+              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                SQL Query Analytics
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Track query performance, execution times, and identify slow queries. 
+                Get detailed insights into your database operations.
+              </p>
+            </div>
+
+            {/* User Management */}
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-lg transition-shadow">
+              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                User Management
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Monitor user activity, track authentication events, and manage 
+                user permissions across your application.
+              </p>
+            </div>
+
+            {/* Table Explorer */}
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-lg transition-shadow">
+              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Database className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                Table Explorer
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Browse and explore your database tables, view schema changes, 
+                and monitor data growth patterns.
+              </p>
+            </div>
+
+            {/* Storage Buckets */}
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-lg transition-shadow">
+              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Folder className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                Storage Management
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Monitor storage bucket usage, track file uploads, and manage 
+                storage policies from your mobile device.
+              </p>
+            </div>
+
+            {/* Real-time Monitoring */}
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-lg transition-shadow">
+              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                Real-time Alerts
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Get instant notifications for database issues, performance 
+                problems, or security events.
+              </p>
+            </div>
+
+            {/* Request Tracking */}
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-lg transition-shadow">
+              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <FileText className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                Request Tracking
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Monitor API requests, track usage patterns, and analyze 
+                application performance metrics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-foreground mb-6">
+              Ready to Monitor Your Database?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Join thousands of developers who trust SupaStats for their Supabase monitoring needs.
+            </p>
+            <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border py-12 px-4">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+              <Database className="h-6 w-6 text-primary" />
+              <span className="text-xl font-bold text-foreground">SupaStats</span>
+            </div>
+            <div className="flex items-center space-x-6">
+              <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                Terms & Conditions
+              </Link>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
+            <p>&copy; 2024 SupaStats. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
