@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="text-2xl font-semibold text-foreground mb-4">1. Introduction</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Welcome to SupaStats ("we," "our," or "us"). We are committed to protecting your privacy and ensuring 
+                  Welcome to SupaStats (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your privacy and ensuring 
                   the security of your personal information. This Privacy Policy explains how we collect, use, disclose, 
                   and safeguard your information when you use our mobile application and related services.
                 </p>
@@ -146,7 +146,7 @@ export default function PrivacyPolicy() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold text-foreground mb-4">9. Children's Privacy</h2>
+                <h2 className="text-2xl font-semibold text-foreground mb-4">9. Children&apos;s Privacy</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Our services are not directed to children under 13 years of age. We do not knowingly collect 
                   personal information from children under 13. If we become aware that we have collected personal 
@@ -158,7 +158,7 @@ export default function PrivacyPolicy() {
                 <h2 className="text-2xl font-semibold text-foreground mb-4">10. Changes to This Privacy Policy</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   We may update this Privacy Policy from time to time. We will notify you of any material changes 
-                  by posting the new Privacy Policy in the app and updating the "Last updated" date. Your continued 
+                  by posting the new Privacy Policy in the app and updating the &quot;Last updated&quot; date. Your continued 
                   use of our services after any changes indicates your acceptance of the updated Privacy Policy.
                 </p>
               </section>

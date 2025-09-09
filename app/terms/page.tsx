@@ -36,9 +36,9 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="text-2xl font-semibold text-foreground mb-4">1. Acceptance of Terms</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  By downloading, installing, or using the SupaStats mobile application ("App"), you agree to be bound 
-                  by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use our App. 
-                  These Terms constitute a legal agreement between you and SupaStats ("we," "us," or "our").
+                  By downloading, installing, or using the SupaStats mobile application (&quot;App&quot;), you agree to be bound 
+                  by these Terms and Conditions (&quot;Terms&quot;). If you do not agree to these Terms, please do not use our App. 
+                  These Terms constitute a legal agreement between you and SupaStats (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
                 </p>
               </section>
 
@@ -86,11 +86,11 @@ export default function TermsAndConditions() {
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
                   <li>Use the App for any illegal or unauthorized purpose</li>
-                  <li>Attempt to gain unauthorized access to our systems or other users' accounts</li>
-                  <li>Interfere with or disrupt the App's functionality or servers</li>
+                  <li>Attempt to gain unauthorized access to our systems or other users&apos; accounts</li>
+                  <li>Interfere with or disrupt the App&apos;s functionality or servers</li>
                   <li>Upload or transmit malicious code, viruses, or harmful content</li>
                   <li>Reverse engineer, decompile, or disassemble the App</li>
-                  <li>Use the App to monitor databases you don't own or have permission to access</li>
+                  <li>Use the App to monitor databases you don&apos;t own or have permission to access</li>
                   <li>Share your account credentials with third parties</li>
                 </ul>
               </section>
@@ -102,7 +102,7 @@ export default function TermsAndConditions() {
                     <h3 className="text-xl font-medium text-foreground mb-2">5.1 Third-Party Service</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       Our App integrates with Supabase, a third-party database service. You must have valid Supabase 
-                      credentials and comply with Supabase's terms of service. We are not responsible for Supabase's 
+                      credentials and comply with Supabase&apos;s terms of service. We are not responsible for Supabase&apos;s 
                       availability, performance, or policies.
                     </p>
                   </div>
@@ -165,7 +165,7 @@ export default function TermsAndConditions() {
                     <h3 className="text-xl font-medium text-foreground mb-2">9.1 Service Availability</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       We strive to maintain high service availability but cannot guarantee uninterrupted access. 
-                      The App is provided "as is" without warranties of any kind.
+                      The App is provided &quot;as is&quot; without warranties of any kind.
                     </p>
                   </div>
                   <div>
