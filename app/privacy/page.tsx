@@ -16,6 +16,9 @@ export default function PrivacyPolicy() {
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
+            <Link href="/support" className="text-muted-foreground hover:text-primary transition-colors">
+              Support
+            </Link>
             <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
               Terms
             </Link>
@@ -190,6 +193,9 @@ export default function PrivacyPolicy() {
             <div className="flex items-center space-x-6">
               <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
                 Home
+              </Link>
+              <Link href="/support" className="text-muted-foreground hover:text-primary transition-colors">
+                Support
               </Link>
               <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
                 Terms & Conditions
